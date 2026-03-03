@@ -82,16 +82,17 @@ footer {
 .hero::after {
   content: "";
   position: absolute;
-  bottom: 400px;
-  right: -30px;
-  width: 300px;
-  height: 300px;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
   background-image: url("cantoneira.png");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.10;
   pointer-events: none;
 }
+
 
 
 
