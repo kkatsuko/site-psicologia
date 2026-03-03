@@ -82,7 +82,7 @@ footer {
 .hero::after {
   content: "";
   position: absolute;
-  bottom: 120px;
+  bottom: 300px;
   right: -30px;
   width: 200px;
   height: 200px;
@@ -92,6 +92,7 @@ footer {
   opacity: 0.12;
   pointer-events: none;
 }
+
 
 
 
