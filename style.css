@@ -4,13 +4,14 @@ body {
   background-color: #F2E6D8;
   color: #5A2E2E;
   text-align: center;
+  line-height: 1.6;
 }
 
 .container {
   width: 90%;
   max-width: 800px;
   margin: auto;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .hero {
@@ -58,13 +59,25 @@ h1 {
 }
 
 section {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
   margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #5A2E2E;
+  margin: 8px auto 0;
+  opacity: 0.3;
 }
 
 footer {
@@ -97,12 +110,32 @@ footer {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 18px;
-  margin-top: 25px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(90, 46, 46, 0.2);
+  margin: 30px auto 0;
+  max-width: 600px;
+  line-height: 1.6;
   color: #5A2E2E;
   opacity: 0.85;
+  position: relative;
 }
+
+.citacao::before {
+  content: "“";
+  font-size: 40px;
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  opacity: 0.2;
+}
+
+.citacao::after {
+  content: "”";
+  font-size: 40px;
+  position: absolute;
+  right: -15px;
+  bottom: -20px;
+  opacity: 0.2;
+}
+
 
 
 
