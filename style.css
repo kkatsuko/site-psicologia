@@ -10,7 +10,7 @@ body {
   width: 90%;
   max-width: 800px;
   margin: auto;
-  padding: 40px 0;
+  padding: 25px 0;
 }
 
 .hero {
@@ -58,7 +58,7 @@ h1 {
 }
 
 section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 h2 {
@@ -67,8 +67,27 @@ h2 {
   margin-bottom: 20px;
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  background: url('https://www.transparentpng.com/thumb/leaf/green-leaf-png-clipart-5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+}
+
 footer {
   background-color: #E6D2B5;
   padding: 20px;
   font-size: 14px;
+
 }
