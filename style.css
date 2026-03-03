@@ -64,7 +64,7 @@ section {
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 footer {
@@ -92,6 +92,7 @@ footer {
   opacity: 0.10;
   pointer-events: none;
 }
+
 
 
 
