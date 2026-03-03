@@ -82,12 +82,13 @@ footer {
 .hero::after {
   content: "";
   position: absolute;
-  bottom: -40px;
-  right: -40px;
-  width: 220px;
-  height: 220px;
-  background: url('https://www.transparentpng.com/thumb/leaf/green-leaf-png-clipart-5.png');
+  bottom: -30px;
+  right: -30px;
+  width: 200px;
+  height: 200px;
+  background-image: url("cantoneira.png");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.15;
+  opacity: 0.12;
+  pointer-events: none;
 }
