@@ -93,6 +93,15 @@ footer {
   pointer-events: none;
 }
 
+.citacao {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #5A2E2E;
+  opacity: 0.85;
+}
 
 
 
