@@ -259,6 +259,13 @@ margin-top:25px;
 
 }
 
+.infos span{
+white-space:nowrap;
+}
+
+.infos span:not(:last-child)::after{
+content:" • ";
+}
 
 
 
