@@ -176,6 +176,50 @@ footer {
   opacity: 0.7;
 }
 
+.hero-content {
+  transition: all 0.4s ease;
+}
+
+body.scrolled .hero {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+body.scrolled .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+}
+
+body.scrolled .foto {
+  width: 50px;
+  height: 50px;
+  border-width: 3px;
+}
+
+body.scrolled h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+body.scrolled .subtitulo {
+  font-size: 12px;
+  margin: 0;
+}
+
+body.scrolled .infos {
+  display: none;
+}
+
+body.scrolled .hero-botao {
+  margin-top: 0;
+  padding: 8px 18px;
+  font-size: 14px;
+}
 
 
 
