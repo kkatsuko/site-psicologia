@@ -1,3 +1,11 @@
+/* =================================
+BASE
+================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -5,15 +13,15 @@ body {
   color: #5A2E2E;
   text-align: center;
   line-height: 1.6;
-  padding-top: 70px;
+  padding-top: 10px;
 }
 
-main{
-margin-top:40px;
-}
+/* =================================
+LAYOUT
+================================= */
 
-html {
-  scroll-behavior: smooth;
+main {
+  margin-top: 40px;
 }
 
 .container {
@@ -23,52 +31,18 @@ html {
   padding: 10px 0;
 }
 
-.hero {
-  background-color: #E6D2B5;
-  padding: 40px 0;
+section {
+  padding: 10px 0;
 }
 
-.foto {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 8px solid #5A2E2E;
-}
+/* =================================
+TIPOGRAFIA
+================================= */
 
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   margin: 20px 0 10px;
-}
-
-.subtitulo {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.infos p {
-  margin: 5px 0;
-}
-
-.botao {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 30px;
-  background-color: #5A2E2E;
-  color: #F2E6D8;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.botao:hover {
-  background-color: #3E1F1F;
-}
-
-section {
-  padding: 10px 0;
 }
 
 h2 {
@@ -89,17 +63,71 @@ h2::after {
   opacity: 0.3;
 }
 
-footer {
-  background-color: #E6D2B5;
-  padding: 20px;
-  font-size: 14px;
-
+.subtitulo {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
+/* =================================
+MENU
+================================= */
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #F2E6D8;
+  border-bottom: 1px solid rgba(90, 46, 46, 0.15);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #5A2E2E;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* =================================
+HERO
+================================= */
+
 .hero {
+  background-color: #E6D2B5;
+  padding: 40px 0;
   position: relative;
   overflow: hidden;
 }
+
+.hero-content {
+  transition: all 0.4s ease;
+}
+
+.hero-texto {
+  text-align: center;
+}
+
+.foto {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #5A2E2E;
+}
+
+/* cantoneira floral */
 
 .hero::after {
   content: "";
@@ -121,13 +149,48 @@ footer {
   z-index: 1;
 }
 
+/* =================================
+INFOS
+================================= */
+
+.infos span {
+  white-space: nowrap;
+}
+
+.infos span:not(:last-child)::after {
+  content: " • ";
+}
+
+/* =================================
+BOTÕES
+================================= */
+
+.botao {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background-color: #5A2E2E;
+  color: #F2E6D8;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #3E1F1F;
+}
+
+/* =================================
+CITAÇÃO
+================================= */
+
 .citacao {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 18px;
   margin: 30px auto 0;
   max-width: 600px;
-  line-height: 1.6;
   color: #5A2E2E;
   opacity: 0.85;
   position: relative;
@@ -151,38 +214,19 @@ footer {
   opacity: 0.2;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #F2E6D8;
-  border-bottom: 1px solid rgba(90, 46, 46, 0.15);
-  padding: 15px 0;
-  z-index: 1000;
-}
+/* =================================
+FOOTER
+================================= */
 
-.menu-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #5A2E2E;
-  font-weight: 500;
+footer {
+  background-color: #E6D2B5;
+  padding: 20px;
   font-size: 14px;
-  letter-spacing: 1px;
 }
 
-.menu a:hover {
-  opacity: 0.7;
-}
-
-.hero-content {
-  transition: all 0.4s ease;
-}
+/* =================================
+SCROLL HEADER COMPACTO
+================================= */
 
 body.scrolled .hero {
   position: fixed;
@@ -197,6 +241,7 @@ body.scrolled .hero-content {
   align-items: center;
   justify-content: space-between;
   max-width: 1100px;
+  margin: auto;
 }
 
 body.scrolled .foto {
@@ -225,62 +270,80 @@ body.scrolled .hero-botao {
   font-size: 14px;
 }
 
-@media (max-width: 900px){
+/* =================================
+RESPONSIVO
+================================= */
 
-body.scrolled .hero{
-position:relative;
-top:0;
-}
+@media (max-width: 900px) {
 
-body.scrolled .hero-content{
-display:block;
-text-align:center;
-}
+  body.scrolled .hero {
+    position: relative;
+    top: 0;
+  }
 
-body.scrolled .foto{
-width:220px;
-height:220px;
-border-width:8px;
-}
+  body.scrolled .hero-content {
+    display: block;
+    text-align: center;
+  }
 
-body.scrolled h1{
-font-size:48px;
-margin:20px 0 10px;
-}
+  body.scrolled .foto {
+    width: 220px;
+    height: 220px;
+    border-width: 8px;
+  }
 
-body.scrolled .subtitulo{
-font-size:18px;
-margin-bottom:20px;
-}
+  body.scrolled h1 {
+    font-size: 48px;
+    margin: 20px 0 10px;
+  }
 
-body.scrolled .botao{
-margin-top:25px;
-}
+  body.scrolled .subtitulo {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-}
-
-.infos span{
-white-space:nowrap;
-}
-
-.infos span:not(:last-child)::after{
-content:" • ";
-}
-
-@media (max-width:600px){
-
-.infos span{
-display:block;
-margin:3px 0;
-}
+  body.scrolled .botao {
+    margin-top: 25px;
+  }
 
 }
 
+@media (max-width: 600px) {
 
+  .infos span {
+    display: block;
+    margin: 3px 0;
+  }
 
+  .hero .foto {
+    display: none;
+  }
 
+  .hero .infos {
+    display: none;
+  }
 
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
 
+  .hero h1 {
+    font-size: 32px;
+    margin: 5px 0;
+  }
 
+  .subtitulo {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
 
+  .hero-botao {
+    width: 80%;
+    text-align: center;
+  }
 
+}
