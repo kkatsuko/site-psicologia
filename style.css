@@ -164,7 +164,7 @@ footer {
 .menu-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -275,6 +275,7 @@ margin:3px 0;
 }
 
 }
+
 
 
 
