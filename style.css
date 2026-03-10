@@ -8,6 +8,10 @@ body {
   padding-top: 70px;
 }
 
+main{
+margin-top:40px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -221,6 +225,39 @@ body.scrolled .hero-botao {
   font-size: 14px;
 }
 
+@media (max-width: 900px){
+
+body.scrolled .hero{
+position:relative;
+top:0;
+}
+
+body.scrolled .hero-content{
+display:block;
+text-align:center;
+}
+
+body.scrolled .foto{
+width:220px;
+height:220px;
+border-width:8px;
+}
+
+body.scrolled h1{
+font-size:48px;
+margin:20px 0 10px;
+}
+
+body.scrolled .subtitulo{
+font-size:18px;
+margin-bottom:20px;
+}
+
+body.scrolled .botao{
+margin-top:25px;
+}
+
+}
 
 
 
