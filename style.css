@@ -5,6 +5,11 @@ body {
   color: #5A2E2E;
   text-align: center;
   line-height: 1.6;
+  padding-top: 70px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -142,6 +147,34 @@ footer {
   opacity: 0.2;
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #F2E6D8;
+  border-bottom: 1px solid rgba(90, 46, 46, 0.15);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #5A2E2E;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
 
 
 
