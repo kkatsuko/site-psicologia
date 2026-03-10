@@ -96,18 +96,29 @@
     <p>© 2026 Nicole Pouço · CRP 06/161340</p>
   </footer>
 <script>
-window.addEventListener("scroll", function() {
+function controlarScroll() {
+
+  if (window.innerWidth <= 900) {
+    document.body.classList.remove("scrolled");
+    return;
+  }
+
   if (window.scrollY > 120) {
     document.body.classList.add("scrolled");
   } else {
     document.body.classList.remove("scrolled");
   }
-});
+
+}
+
+window.addEventListener("scroll", controlarScroll);
+window.addEventListener("resize", controlarScroll);
 </script>
   
 </body>
 
 </html>
+
 
 
 
