@@ -8,12 +8,12 @@ html {
 
 body {
   margin: 0;
+  padding-top: 60px;
   font-family: 'Montserrat', sans-serif;
   background-color: #F2E6D8;
   color: #5A2E2E;
   text-align: center;
   line-height: 1.6;
-  padding-top: 60px;
 }
 
 /* =================================
@@ -40,17 +40,17 @@ TIPOGRAFIA
 ================================= */
 
 h1 {
+  margin: 20px 0 10px;
   font-family: 'Playfair Display', serif;
   font-size: 48px;
-  margin: 20px 0 10px;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 8px;
   position: relative;
   display: inline-block;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
 }
 
 h2::after {
@@ -58,14 +58,14 @@ h2::after {
   display: block;
   width: 40px;
   height: 2px;
-  background-color: #5A2E2E;
   margin: 8px auto 0;
+  background-color: #5A2E2E;
   opacity: 0.3;
 }
 
 .subtitulo {
-  font-size: 18px;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 /* =================================
@@ -76,11 +76,11 @@ MENU
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   width: 100%;
+  padding: 15px 0;
   background-color: #F2E6D8;
   border-bottom: 1px solid rgba(90, 46, 46, 0.15);
-  padding: 15px 0;
-  z-index: 1000;
   transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -91,10 +91,10 @@ MENU
 }
 
 .menu a {
-  text-decoration: none;
   color: #5A2E2E;
-  font-weight: 500;
+  text-decoration: none;
   font-size: 14px;
+  font-weight: 500;
   letter-spacing: 1px;
   transition: font-size 0.3s ease, opacity 0.3s ease;
 }
@@ -103,15 +103,26 @@ MENU
   opacity: 0.7;
 }
 
+/* Menu compacto ao rolar */
+
+body.scrolled .menu {
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
+}
+
+body.scrolled .menu a {
+  font-size: 13px;
+}
+
 /* =================================
-HERO
+HERO PRINCIPAL
 ================================= */
 
 .hero {
-  background-color: #E6D2B5;
-  padding: 40px 0;
   position: relative;
   overflow: hidden;
+  padding: 40px 0;
+  background-color: #E6D2B5;
 }
 
 .hero-content {
@@ -126,17 +137,18 @@ HERO
   width: 220px;
   height: 220px;
   object-fit: cover;
-  border-radius: 50%;
   border: 8px solid #5A2E2E;
+  border-radius: 50%;
 }
 
-/* cantoneira floral */
+/* Cantoneira floral da hero principal */
 
 .hero::after {
   content: "";
   position: absolute;
   top: -20px;
   right: -20px;
+  z-index: 0;
   width: 400px;
   height: 400px;
   background-image: url("cantoneira.png");
@@ -144,7 +156,6 @@ HERO
   background-repeat: no-repeat;
   opacity: 0.10;
   pointer-events: none;
-  z-index: 0;
 }
 
 .hero .container {
@@ -185,7 +196,7 @@ BOTÕES
 }
 
 /* =================================
-SOBRE / CONTATO
+SEÇÕES
 ================================= */
 
 .sobre,
@@ -198,31 +209,31 @@ CITAÇÃO
 ================================= */
 
 .citacao {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 18px;
-  margin: 30px auto 0;
-  max-width: 600px;
-  color: #5A2E2E;
-  opacity: 0.85;
   position: relative;
+  max-width: 600px;
+  margin: 30px auto 0;
+  color: #5A2E2E;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-style: italic;
+  opacity: 0.85;
 }
 
 .citacao::before {
   content: "“";
-  font-size: 40px;
   position: absolute;
-  left: -15px;
   top: -10px;
+  left: -15px;
+  font-size: 40px;
   opacity: 0.2;
 }
 
 .citacao::after {
   content: "”";
-  font-size: 40px;
   position: absolute;
   right: -15px;
   bottom: -20px;
+  font-size: 40px;
   opacity: 0.2;
 }
 
@@ -231,22 +242,9 @@ FOOTER
 ================================= */
 
 footer {
-  background-color: #E6D2B5;
   padding: 10px;
+  background-color: #E6D2B5;
   font-size: 14px;
-}
-
-/* =================================
-SCROLL HEADER
-================================= */
-
-body.scrolled .menu {
-  padding: 10px 0;
-  box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
-}
-
-body.scrolled .menu a {
-  font-size: 13px;
 }
 
 /* =================================
@@ -271,11 +269,11 @@ Hero horizontal + barra compacta separada
   }
 
   .hero-content {
-    max-width: 1100px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 32px;
+    max-width: 1100px;
     text-align: left;
   }
 
@@ -284,13 +282,13 @@ Hero horizontal + barra compacta separada
   }
 
   .hero h1 {
-    font-size: 42px;
     margin: 0 0 6px;
+    font-size: 42px;
   }
 
   .subtitulo {
-    font-size: 17px;
     margin: 0 0 10px;
+    font-size: 17px;
   }
 
   .infos {
@@ -304,19 +302,20 @@ Hero horizontal + barra compacta separada
   }
 
   /* Barra compacta desktop */
+
   .desktop-compact-hero {
     display: block !important;
     position: fixed;
     top: 39px;
     left: 0;
+    z-index: 999;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    padding: 8px 5%;
     background-color: #E6D2B5;
     color: #5A2E2E;
-    z-index: 999;
-    padding: 8px 5%;
     box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
-    overflow: hidden;
 
     opacity: 0;
     transform: translateY(-8px);
@@ -324,20 +323,20 @@ Hero horizontal + barra compacta separada
     transition: opacity 0.25s ease, transform 0.25s ease;
   }
 
-.desktop-compact-hero::after {
-  content: "";
-  position: absolute;
-  top: -80px;
-  right: -20px;
-  width: 260px;
-  height: 260px;
-  background-image: url("cantoneira.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.10;
-  pointer-events: none;
-  z-index: 0;
-}
+  .desktop-compact-hero::after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -20px;
+    z-index: 0;
+    width: 260px;
+    height: 260px;
+    background-image: url("cantoneira.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.10;
+    pointer-events: none;
+  }
 
   body.scrolled .desktop-compact-hero {
     opacity: 1;
@@ -346,23 +345,23 @@ Hero horizontal + barra compacta separada
   }
 
   .desktop-compact-container {
-    max-width: 1100px;
-    margin: auto;
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 22px;
+    max-width: 1100px;
+    margin: auto;
     text-align: left;
-    position: relative;
-    z-index: 1;
   }
 
   .desktop-compact-foto {
     width: 70px;
     height: 70px;
     object-fit: cover;
-    border-radius: 50%;
     border: 4px solid #5A2E2E;
+    border-radius: 50%;
   }
 
   .desktop-compact-texto strong {
@@ -374,8 +373,8 @@ Hero horizontal + barra compacta separada
 
   .desktop-compact-texto span {
     display: block;
-    font-size: 14px;
     margin-top: 3px;
+    font-size: 14px;
   }
 
   .desktop-compact-botao {
@@ -401,9 +400,11 @@ TABLET
 ================================= */
 
 @media (max-width: 900px) {
+
   .menu-container {
     gap: 45px;
   }
+
 }
 
 /* =================================
@@ -461,13 +462,13 @@ MOBILE
   }
 
   .hero h1 {
-    font-size: 34px;
     margin: 6px 0 0;
+    font-size: 34px;
   }
 
   .subtitulo {
-    font-size: 14px;
     margin: 0;
+    font-size: 14px;
   }
 
   .hero .infos {
@@ -486,8 +487,8 @@ MOBILE
   }
 
   .citacao {
-    font-size: 17px;
     padding: 0 12px;
+    font-size: 17px;
   }
 
   .citacao::before {
@@ -503,12 +504,14 @@ MOBILE
     scroll-margin-top: 115px;
   }
 
-  /* Hero compacta separada no mobile */
+  /* Barra compacta mobile */
+
   .mobile-compact-hero {
     display: flex !important;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
     width: 100%;
     box-sizing: border-box;
     align-items: center;
@@ -517,7 +520,6 @@ MOBILE
     padding: 52px 6% 8px;
     background-color: #E6D2B5;
     color: #5A2E2E;
-    z-index: 999;
     box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
 
     opacity: 0;
@@ -546,18 +548,18 @@ MOBILE
 
   .mobile-compact-texto span {
     display: block;
-    font-size: 11px;
     margin-top: 2px;
+    font-size: 11px;
   }
 
   .mobile-compact-botao {
     width: 76px;
     flex-shrink: 0;
     padding: 7px 8px;
-    border-radius: 24px;
     background-color: #5A2E2E;
     color: #F2E6D8;
     text-decoration: none;
+    border-radius: 24px;
     font-size: 12px;
     line-height: 1.1;
     font-weight: 500;
