@@ -21,7 +21,7 @@ LAYOUT
 ================================= */
 
 main {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .container {
@@ -75,11 +75,13 @@ MENU
 .menu {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: #F2E6D8;
   border-bottom: 1px solid rgba(90, 46, 46, 0.15);
   padding: 15px 0;
   z-index: 1000;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-container {
@@ -94,6 +96,7 @@ MENU
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
+  transition: font-size 0.3s ease, opacity 0.3s ease;
 }
 
 .menu a:hover {
@@ -125,6 +128,7 @@ HERO
   object-fit: cover;
   border-radius: 50%;
   border: 8px solid #5A2E2E;
+  transition: all 0.4s ease;
 }
 
 /* cantoneira floral */
@@ -174,11 +178,20 @@ BOTÕES
   text-decoration: none;
   border-radius: 30px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease;
 }
 
 .botao:hover {
   background-color: #3E1F1F;
+}
+
+/* =================================
+SOBRE / CONTATO
+================================= */
+
+.sobre,
+.contato {
+  scroll-margin-top: 90px;
 }
 
 /* =================================
@@ -226,7 +239,6 @@ footer {
 
 /* =================================
 SCROLL HEADER
-Mantém a página estável
 ================================= */
 
 body.scrolled .menu {
@@ -239,79 +251,160 @@ body.scrolled .menu a {
 }
 
 /* =================================
-RESPONSIVO
+DESKTOP
+Evita o bug de pulo no desktop
+================================= */
+
+@media (min-width: 901px) {
+  body.scrolled .hero {
+    position: relative;
+  }
+}
+
+/* =================================
+TABLET
 ================================= */
 
 @media (max-width: 900px) {
-
-  body.scrolled .hero {
-    position: relative;
-    top: 0;
+  .menu-container {
+    gap: 45px;
   }
-
-  body.scrolled .hero-content {
-    display: block;
-    text-align: center;
-  }
-
-  body.scrolled .foto {
-    width: 220px;
-    height: 220px;
-    border-width: 8px;
-  }
-
-  body.scrolled h1 {
-    font-size: 48px;
-    margin: 20px 0 10px;
-  }
-
-  body.scrolled .subtitulo {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  body.scrolled .botao {
-    margin-top: 25px;
-  }
-
 }
+
+/* =================================
+MOBILE
+================================= */
 
 @media (max-width: 600px) {
 
-  .infos span {
-    display: block;
-    margin: 3px 0;
+  body {
+    padding-top: 48px;
   }
 
-  .hero .foto {
-    display: none;
+  main {
+    margin-top: 0;
   }
 
-  .hero .infos {
-    display: none;
+  section {
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 88%;
+    padding: 8px 0;
+  }
+
+  .menu {
+    padding: 12px 0;
+  }
+
+  .menu-container {
+    gap: 35px;
+  }
+
+  .menu a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 24px 0 20px;
   }
 
   .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 10px 0;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .hero .foto {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-width: 5px;
   }
 
   .hero h1 {
-    font-size: 32px;
-    margin: 5px 0;
+    font-size: 34px;
+    margin: 6px 0 0;
   }
 
   .subtitulo {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin: 0;
+  }
+
+  .hero .infos {
+    display: none;
   }
 
   .hero-botao {
-    width: 80%;
+    width: auto;
+    margin-top: 8px;
+    padding: 10px 24px;
     text-align: center;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .citacao {
+    font-size: 17px;
+    padding: 0 12px;
+  }
+
+  .citacao::before {
+    left: 0;
+  }
+
+  .citacao::after {
+    right: 0;
+  }
+
+  .sobre,
+  .contato {
+    scroll-margin-top: 115px;
+  }
+
+  /* Hero compacta quando rolar a página */
+  body.scrolled .hero {
+    position: sticky;
+    top: 42px;
+    z-index: 999;
+    padding: 6px 0;
+    box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
+  }
+
+  body.scrolled .hero-content {
+    gap: 4px;
+    padding: 4px 0;
+  }
+
+  body.scrolled .foto {
+    display: none;
+  }
+
+  body.scrolled .hero h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  body.scrolled .subtitulo {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  body.scrolled .infos {
+    display: none;
+  }
+
+  body.scrolled .hero-botao {
+    width: auto;
+    margin-top: 4px;
+    padding: 7px 18px;
+    font-size: 13px;
   }
 
 }
