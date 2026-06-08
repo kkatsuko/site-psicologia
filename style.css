@@ -128,7 +128,6 @@ HERO
   object-fit: cover;
   border-radius: 50%;
   border: 8px solid #5A2E2E;
-  transition: all 0.4s ease;
 }
 
 /* cantoneira floral */
@@ -178,7 +177,7 @@ BOTÕES
   text-decoration: none;
   border-radius: 30px;
   font-weight: 500;
-  transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease, margin 0.3s ease;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .botao:hover {
@@ -251,15 +250,24 @@ body.scrolled .menu a {
 }
 
 /* =================================
+BARRAS COMPACTAS
+Escondidas por padrão
+================================= */
+
+.mobile-compact-hero,
+.desktop-compact-hero {
+  display: none !important;
+}
+
+/* =================================
 DESKTOP
-Hero horizontal e compacta ao rolar
+Hero horizontal + barra compacta separada
 ================================= */
 
 @media (min-width: 901px) {
 
   .hero {
     padding: 20px 0;
-    transition: padding 0.3s ease, box-shadow 0.3s ease;
   }
 
   .hero-content {
@@ -278,19 +286,16 @@ Hero horizontal e compacta ao rolar
   .hero h1 {
     font-size: 42px;
     margin: 0 0 6px;
-    transition: font-size 0.3s ease, margin 0.3s ease;
   }
 
   .subtitulo {
     font-size: 17px;
     margin: 0 0 10px;
-    transition: font-size 0.3s ease, margin 0.3s ease;
   }
 
   .infos {
     margin: 0;
     font-size: 14px;
-    transition: font-size 0.3s ease, opacity 0.3s ease;
   }
 
   .hero-botao {
@@ -298,41 +303,77 @@ Hero horizontal e compacta ao rolar
     white-space: nowrap;
   }
 
-  body.scrolled .hero {
-    position: sticky;
-    top: 38px;
+  /* Barra compacta desktop */
+  .desktop-compact-hero {
+    display: block !important;
+    position: fixed;
+    top: 39px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E6D2B5;
+    color: #5A2E2E;
     z-index: 999;
-    padding: 10px 0;
+    padding: 8px 5%;
     box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
+
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
   }
 
-  body.scrolled .hero-content {
+  body.scrolled .desktop-compact-hero {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .desktop-compact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
     gap: 22px;
+    text-align: left;
   }
 
-  body.scrolled .foto {
-    width: 90px;
-    height: 90px;
-    border-width: 4px;
+  .desktop-compact-foto {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #5A2E2E;
   }
 
-  body.scrolled .hero h1 {
+  .desktop-compact-texto strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
-    margin: 0 0 3px;
+    line-height: 1.1;
   }
 
-  body.scrolled .subtitulo {
+  .desktop-compact-texto span {
+    display: block;
     font-size: 14px;
-    margin: 0;
+    margin-top: 3px;
   }
 
-  body.scrolled .infos {
-    display: none;
-  }
-
-  body.scrolled .hero-botao {
+  .desktop-compact-botao {
+    display: inline-block;
     padding: 9px 22px;
+    background-color: #5A2E2E;
+    color: #F2E6D8;
+    text-decoration: none;
+    border-radius: 30px;
     font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .desktop-compact-botao:hover {
+    background-color: #3E1F1F;
   }
 
 }
@@ -345,15 +386,6 @@ TABLET
   .menu-container {
     gap: 45px;
   }
-}
-
-/* =================================
-HERO COMPACTA MOBILE
-Escondida por padrão
-================================= */
-
-.mobile-compact-hero {
-  display: none !important;
 }
 
 /* =================================
@@ -457,7 +489,7 @@ MOBILE
   .mobile-compact-hero {
     display: flex !important;
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
