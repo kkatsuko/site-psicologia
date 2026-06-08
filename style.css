@@ -369,59 +369,72 @@ MOBILE
   }
 
   /* Hero compacta quando rolar a página */
-  body.scrolled .hero {
-    position: sticky;
-    top: 42px;
+  /* Hero compacta separada no mobile */
+.mobile-compact-hero {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  .mobile-compact-hero {
+    display: flex;
+    position: fixed;
+    top: 43px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 6%;
+    background-color: #E6D2B5;
+    color: #5A2E2E;
     z-index: 999;
-    padding: 6px 0;
     box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
+
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
   }
 
- body.scrolled .hero-content {
-  width: 88%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 4px 0;
-}
+  body.scrolled .mobile-compact-hero {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
-body.scrolled .hero-texto {
-  text-align: left;
-  flex: 1;
-}
+  .mobile-compact-texto {
+    text-align: left;
+    line-height: 1.15;
+  }
 
-body.scrolled .foto {
-  display: none;
-}
+  .mobile-compact-texto strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
 
-body.scrolled .hero h1 {
-  font-size: 22px;
-  margin: 0;
-  line-height: 1.1;
-}
+  .mobile-compact-texto span {
+    display: block;
+    font-size: 11px;
+    margin-top: 2px;
+  }
 
-body.scrolled .subtitulo {
-  font-size: 11px;
-  margin: 2px 0 0;
-  line-height: 1.2;
-}
+  .mobile-compact-botao {
+    width: 76px;
+    flex-shrink: 0;
+    padding: 7px 8px;
+    border-radius: 24px;
+    background-color: #5A2E2E;
+    color: #F2E6D8;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.1;
+    font-weight: 500;
+    text-align: center;
+  }
 
-body.scrolled .infos {
-  display: none;
 }
-
-body.scrolled .hero-botao {
-  width: 82px;
-  margin-top: 0;
-  padding: 7px 10px;
-  font-size: 12px;
-  line-height: 1.15;
-  text-align: center;
-  flex-shrink: 0;
-}
-}
-
 }
