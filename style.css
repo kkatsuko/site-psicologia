@@ -377,34 +377,51 @@ MOBILE
     box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
   }
 
-  body.scrolled .hero-content {
-    gap: 4px;
-    padding: 4px 0;
-  }
+ body.scrolled .hero-content {
+  width: 88%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+}
 
-  body.scrolled .foto {
-    display: none;
-  }
+body.scrolled .hero-texto {
+  text-align: left;
+  flex: 1;
+}
 
-  body.scrolled .hero h1 {
-    font-size: 22px;
-    margin: 0;
-  }
+body.scrolled .foto {
+  display: none;
+}
 
-  body.scrolled .subtitulo {
-    font-size: 12px;
-    margin: 0;
-  }
+body.scrolled .hero h1 {
+  font-size: 22px;
+  margin: 0;
+  line-height: 1.1;
+}
 
-  body.scrolled .infos {
-    display: none;
-  }
+body.scrolled .subtitulo {
+  font-size: 11px;
+  margin: 2px 0 0;
+  line-height: 1.2;
+}
 
-  body.scrolled .hero-botao {
-    width: auto;
-    margin-top: 4px;
-    padding: 7px 18px;
-    font-size: 13px;
-  }
+body.scrolled .infos {
+  display: none;
+}
+
+body.scrolled .hero-botao {
+  width: 82px;
+  margin-top: 0;
+  padding: 7px 10px;
+  font-size: 12px;
+  line-height: 1.15;
+  text-align: center;
+  flex-shrink: 0;
+}
+}
 
 }
