@@ -381,14 +381,14 @@ MOBILE
   .mobile-compact-hero {
     display: flex !important;
     position: fixed;
-    top: 43px;
+    top: 0px;
     left: 0;
     width: 100%;
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 8px 6%;
+    padding: 52px 6% 8px;
     background-color: #E6D2B5;
     color: #5A2E2E;
     z-index: 999;
