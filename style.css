@@ -13,7 +13,7 @@ body {
   color: #5A2E2E;
   text-align: center;
   line-height: 1.6;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 
 /* =================================
@@ -21,7 +21,7 @@ LAYOUT
 ================================= */
 
 main {
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 .container {
@@ -225,49 +225,17 @@ footer {
 }
 
 /* =================================
-SCROLL HEADER COMPACTO
+SCROLL HEADER
+Mantém a página estável
 ================================= */
 
-body.scrolled .hero {
-  position: fixed;
-  top: 50px;
-  width: 100%;
+body.scrolled .menu {
   padding: 10px 0;
-  z-index: 999;
+  box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
 }
 
-body.scrolled .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: auto;
-}
-
-body.scrolled .foto {
-  width: 50px;
-  height: 50px;
-  border-width: 3px;
-}
-
-body.scrolled h1 {
-  font-size: 20px;
-  margin: 0;
-}
-
-body.scrolled .subtitulo {
-  font-size: 12px;
-  margin: 0;
-}
-
-body.scrolled .infos {
-  display: none;
-}
-
-body.scrolled .hero-botao {
-  margin-top: 0;
-  padding: 8px 18px;
-  font-size: 14px;
+body.scrolled .menu a {
+  font-size: 13px;
 }
 
 /* =================================
