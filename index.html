@@ -111,12 +111,14 @@
   </footer>
 <script>
 window.addEventListener("scroll", function() {
-  if (window.scrollY > 120) {
+  if (window.scrollY > 160) {
     document.body.classList.add("scrolled");
-  } else {
+  }
+
+  if (window.scrollY < 80) {
     document.body.classList.remove("scrolled");
   }
-});
+}, { passive: true });
 </script>
   
 </body>
