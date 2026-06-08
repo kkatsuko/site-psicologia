@@ -252,18 +252,14 @@ body.scrolled .menu a {
 
 /* =================================
 DESKTOP
-Evita o bug de pulo no desktop
-================================= */
-
-/* =================================
-DESKTOP
-Hero horizontal e mais fina
+Hero horizontal e compacta ao rolar
 ================================= */
 
 @media (min-width: 901px) {
 
   .hero {
     padding: 20px 0;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
   }
 
   .hero-content {
@@ -282,16 +278,19 @@ Hero horizontal e mais fina
   .hero h1 {
     font-size: 42px;
     margin: 0 0 6px;
+    transition: font-size 0.3s ease, margin 0.3s ease;
   }
 
   .subtitulo {
     font-size: 17px;
     margin: 0 0 10px;
+    transition: font-size 0.3s ease, margin 0.3s ease;
   }
 
   .infos {
     margin: 0;
     font-size: 14px;
+    transition: font-size 0.3s ease, opacity 0.3s ease;
   }
 
   .hero-botao {
@@ -300,7 +299,40 @@ Hero horizontal e mais fina
   }
 
   body.scrolled .hero {
-    position: relative;
+    position: sticky;
+    top: 38px;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(90, 46, 46, 0.08);
+  }
+
+  body.scrolled .hero-content {
+    gap: 22px;
+  }
+
+  body.scrolled .foto {
+    width: 90px;
+    height: 90px;
+    border-width: 4px;
+  }
+
+  body.scrolled .hero h1 {
+    font-size: 28px;
+    margin: 0 0 3px;
+  }
+
+  body.scrolled .subtitulo {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  body.scrolled .infos {
+    display: none;
+  }
+
+  body.scrolled .hero-botao {
+    padding: 9px 22px;
+    font-size: 14px;
   }
 
 }
