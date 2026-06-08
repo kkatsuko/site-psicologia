@@ -272,6 +272,15 @@ TABLET
 }
 
 /* =================================
+HERO COMPACTA MOBILE
+Escondida por padrão
+================================= */
+
+.mobile-compact-hero {
+  display: none !important;
+}
+
+/* =================================
 MOBILE
 ================================= */
 
@@ -368,16 +377,9 @@ MOBILE
     scroll-margin-top: 115px;
   }
 
-  /* Hero compacta quando rolar a página */
   /* Hero compacta separada no mobile */
-.mobile-compact-hero {
-  display: none;
-}
-
-@media (max-width: 600px) {
-
   .mobile-compact-hero {
-    display: flex;
+    display: flex !important;
     position: fixed;
     top: 43px;
     left: 0;
@@ -436,5 +438,4 @@ MOBILE
     text-align: center;
   }
 
-}
 }
