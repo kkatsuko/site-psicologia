@@ -102,6 +102,7 @@ p {
 .introducao-secao {
   max-width: 650px;
   margin: 0 auto 30px;
+  text-align: center;
 }
 
 /* =================================
@@ -254,7 +255,7 @@ BOTÕES E LINKS
 }
 
 /* =================================
-ÂNCORAS DAS SEÇÕES
+ÂNCORAS E ALINHAMENTO DAS SEÇÕES
 ================================= */
 
 .sobre,
@@ -264,6 +265,26 @@ BOTÕES E LINKS
 .faq,
 .contato {
   scroll-margin-top: 145px;
+  text-align: center;
+}
+
+.sobre .container,
+.atendimento .container,
+.libras .container,
+.como-funciona .container,
+.faq .container,
+.contato .container {
+  text-align: left;
+}
+
+.sobre h2,
+.atendimento h2,
+.libras h2,
+.como-funciona h2,
+.faq h2,
+.contato h2,
+.chamada-final h2 {
+  text-align: center;
 }
 
 /* =================================
@@ -271,7 +292,7 @@ ACOLHIMENTO
 ================================= */
 
 .acolhimento {
-  padding: 34px 0;
+  padding: 34px 0 10px;
 }
 
 .acolhimento-container {
@@ -290,6 +311,10 @@ ACOLHIMENTO
 /* =================================
 SOBRE MIM
 ================================= */
+
+.sobre {
+  padding-top: 22px;
+}
 
 .sobre .container {
   max-width: 760px;
@@ -311,6 +336,7 @@ CITAÇÃO
   font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-style: italic;
+  text-align: center;
   opacity: 0.85;
 }
 
@@ -397,7 +423,9 @@ LIBRAS
 }
 
 .libras .botao {
-  margin-top: 15px;
+  display: block;
+  width: fit-content;
+  margin: 15px auto 0;
 }
 
 /* =================================
@@ -424,10 +452,12 @@ COMO FUNCIONA
   background-color: rgba(242, 230, 216, 0.65);
   border: 1px solid var(--borda);
   border-radius: 16px;
+  text-align: center;
 }
 
 .passo p {
   margin-bottom: 0;
+  text-align: left;
 }
 
 .numero-passo {
@@ -506,16 +536,19 @@ CHAMADA FINAL
   position: relative;
   overflow: hidden;
   background-color: var(--fundo-destaque);
+  text-align: center;
 }
 
 .chamada-final .container {
   position: relative;
   z-index: 1;
   max-width: 650px;
+  text-align: center;
 }
 
 .chamada-final p {
   margin-bottom: 0;
+  text-align: center;
 }
 
 .chamada-final .botao {
@@ -528,6 +561,11 @@ CONTATO
 
 .contato .container {
   max-width: 650px;
+  text-align: center;
+}
+
+.contato p {
+  text-align: center;
 }
 
 .contato .botao {
@@ -833,14 +871,20 @@ MOBILE
   /* Acolhimento */
 
   .acolhimento {
-    padding: 30px 0;
+    padding: 28px 0 6px;
   }
 
   .acolhimento p {
-    font-size: 20px;
+    font-size: 21px;
+    line-height: 1.45;
+    text-align: left;
   }
 
   /* Sobre */
+
+  .sobre {
+    padding-top: 20px;
+  }
 
   .sobre p:not(.citacao),
   .libras-texto p {
