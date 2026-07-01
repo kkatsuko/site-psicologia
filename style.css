@@ -274,8 +274,7 @@ BOTÕES E LINKS
 .atendimento .container,
 .libras .container,
 .como-funciona .container,
-.faq .container,
-.contato .container {
+.faq .container {
   text-align: left;
 }
 
@@ -470,21 +469,6 @@ COMO FUNCIONA
   line-height: 1.25;
   text-align: center;
   color: var(--texto-escuro);
-}
-
-.numero-passo {
-  display: flex;
-  width: 38px;
-  height: 38px;
-  margin: 0 auto 12px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--texto);
-  color: var(--fundo-principal);
-  border-radius: 50%;
-  font-family: 'Cardo', serif;
-  font-size: 19px;
-  font-weight: 700;
 }
 
 /* =================================
@@ -1175,3 +1159,4 @@ MOBILE
   }
 
 }
+
