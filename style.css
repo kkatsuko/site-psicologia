@@ -788,23 +788,23 @@ MOBILE
     padding: 12px 0;
   }
 
-  .menu-container {
-    justify-content: flex-start;
-    gap: 25px;
-    overflow-x: auto;
-    padding: 0 20px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px;
+  overflow: hidden;
+}
 
-  .menu-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .menu a {
-    font-size: 12px;
-    letter-spacing: 0.4px;
-  }
+.menu a {
+  flex: 0 1 auto;
+  font-size: 11px;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+}
 
   body.scrolled .menu a {
     font-size: 12px;
