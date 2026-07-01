@@ -247,8 +247,6 @@ BOTÕES E LINKS
   color: var(--texto);
   font-weight: 500;
   text-decoration: none;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
 }
 
 .barra-contato a:hover,
@@ -1159,4 +1157,3 @@ MOBILE
   }
 
 }
-
