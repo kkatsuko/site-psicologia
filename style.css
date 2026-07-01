@@ -243,14 +243,16 @@ BOTÕES E LINKS
   transform: translateY(-1px);
 }
 
-.email-contato a {
+.barra-contato a {
   color: var(--texto);
   font-weight: 500;
+  text-decoration: none;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
-.email-contato a:hover,
-.email-contato a:focus-visible {
+.barra-contato a:hover,
+.barra-contato a:focus-visible {
   color: var(--texto-escuro);
 }
 
@@ -363,10 +365,6 @@ CITAÇÃO
 COMO POSSO AJUDAR
 ================================= */
 
-.atendimento {
-  background-color: var(--fundo-destaque);
-}
-
 .atendimento .container {
   max-width: 1000px;
 }
@@ -395,6 +393,7 @@ LIBRAS
 ================================= */
 
 .libras {
+  background-color: var(--fundo-destaque);
   position: relative;
   overflow: hidden;
 }
@@ -461,6 +460,16 @@ COMO FUNCIONA
 .passo p {
   margin-bottom: 0;
   text-align: left;
+}
+
+.passo .passo-subtitulo {
+  margin: -4px 0 20px;
+  font-family: 'Cardo', serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--texto-escuro);
 }
 
 .numero-passo {
@@ -569,9 +578,42 @@ ENCERRAMENTO
   margin-top: 4px;
 }
 
-.email-contato {
-  margin-bottom: 0;
+/* =================================
+BARRA DE CONTATOS COMPLEMENTARES
+================================= */
+
+.barra-contato {
+  padding: 0;
+  background-color: var(--fundo-principal);
+  border-top: 1px solid var(--borda);
+  border-bottom: 1px solid var(--borda);
+}
+
+.barra-contato-container {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 14px 0;
+}
+
+.barra-contato a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  color: var(--texto);
+  font-size: 14px;
   overflow-wrap: anywhere;
+}
+
+.barra-contato span {
+  flex-shrink: 0;
+  font-family: 'Cardo', serif;
+  font-size: 18px;
+  color: var(--texto-escuro);
 }
 
 /* =================================
@@ -605,6 +647,69 @@ DESKTOP
 
 @media (min-width: 901px) {
 
+  body {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+
+  .menu a {
+    font-size: 15px;
+  }
+
+  body.scrolled .menu a {
+    font-size: 14px;
+  }
+
+  .acolhimento p,
+  .citacao {
+    font-size: 27px;
+  }
+
+  .passo .passo-subtitulo {
+    font-size: 21px;
+  }
+
+  .faq summary::after {
+    font-size: 27px;
+  }
+
+  .barra-contato a,
+  footer {
+    font-size: 16px;
+  }
+
+  .barra-contato span {
+    font-size: 20px;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  .acolhimento-container,
+  .sobre .container,
+  .libras-container,
+  .faq .container {
+    max-width: 840px;
+  }
+
+  .atendimento .container,
+  .como-funciona .container,
+  .encerramento-container {
+    max-width: 1080px;
+  }
+
+  .barra-contato-container {
+    max-width: 980px;
+  }
+
   .hero {
     padding: 20px 0;
   }
@@ -614,7 +719,7 @@ DESKTOP
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 32px;
-    max-width: 1100px;
+    max-width: 1180px;
     text-align: left;
   }
 
@@ -624,21 +729,22 @@ DESKTOP
 
   .hero h1 {
     margin: 0 0 6px;
-    font-size: 42px;
+    font-size: 46px;
   }
 
   .subtitulo {
     margin: 0 0 10px;
-    font-size: 20px;
+    font-size: 23px;
   }
 
   .infos {
     margin: 0;
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .hero-botao {
     margin-top: 0;
+    font-size: 16px;
     white-space: nowrap;
   }
 
@@ -693,7 +799,7 @@ DESKTOP
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 22px;
-    max-width: 1100px;
+    max-width: 1180px;
     margin: auto;
     text-align: left;
   }
@@ -709,14 +815,14 @@ DESKTOP
   .desktop-compact-texto strong {
     display: block;
     font-family: 'Cardo', serif;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.1;
   }
 
   .desktop-compact-texto span {
     display: block;
     margin-top: 3px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .desktop-compact-botao {
@@ -726,7 +832,7 @@ DESKTOP
     color: var(--fundo-principal);
     text-decoration: none;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     white-space: nowrap;
   }
@@ -755,6 +861,10 @@ TABLET
   .chamada-final,
   .contato {
     padding: 8px 28px;
+  }
+
+  .barra-contato-container {
+    gap: 22px;
   }
 
 }
@@ -981,6 +1091,23 @@ MOBILE
     padding-top: 26px;
     border-top: 1px solid var(--borda);
     border-left: 0;
+  }
+
+  .barra-contato-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 88%;
+    padding: 12px 0;
+  }
+
+  .barra-contato a {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0;
+    font-size: 13px;
+    line-height: 1.35;
   }
 
   /* Barra compacta mobile */
