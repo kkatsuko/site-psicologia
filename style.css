@@ -443,12 +443,14 @@ COMO FUNCIONA
 
 .passos {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: 18px;
 }
 
 .passo {
-  position: relative;
+  height: 100%;
+  box-sizing: border-box;
   padding: 23px 20px 19px;
   background-color: rgba(242, 230, 216, 0.65);
   border: 1px solid var(--borda);
@@ -750,12 +752,6 @@ TABLET
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .passos {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    margin: auto;
-  }
-
   .chamada-final,
   .contato {
     padding: 8px 28px;
@@ -924,16 +920,34 @@ MOBILE
     padding: 18px;
   }
 
-  /* Como funciona */
+/* Como funciona: carrossel horizontal */
 
-  .passos {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
+.passos {
+  display: flex;
+  gap: 14px;
+  width: auto;
+  max-width: none;
+  margin-right: -6%;
+  margin-left: -6%;
+  padding: 0 6% 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 6%;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
 
-  .passo {
-    padding: 20px 18px 18px;
-  }
+.passos::-webkit-scrollbar {
+  display: none;
+}
+
+.passo {
+  flex: 0 0 82%;
+  height: auto;
+  padding: 20px 18px 18px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 
   /* Perguntas frequentes */
 
