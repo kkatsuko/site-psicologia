@@ -45,7 +45,7 @@ main {
 }
 
 section {
-  padding: 45px 0;
+  padding: 34px 0;
 }
 
 /* =================================
@@ -60,15 +60,15 @@ h3 {
 
 h1 {
   margin: 20px 0 10px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
   font-size: 48px;
 }
 
 h2 {
   position: relative;
   display: inline-block;
-  margin: 0 0 24px;
-  font-family: 'Playfair Display', serif;
+  margin: 0 0 18px;
+  font-family: 'Cardo', serif;
   font-size: 32px;
   line-height: 1.2;
 }
@@ -85,7 +85,7 @@ h2::after {
 
 h3 {
   margin: 0 0 10px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
   font-size: 21px;
   line-height: 1.25;
 }
@@ -101,7 +101,7 @@ p {
 
 .introducao-secao {
   max-width: 650px;
-  margin: 0 auto 30px;
+  margin: 0 auto 24px;
   text-align: center;
 }
 
@@ -292,7 +292,7 @@ ACOLHIMENTO
 ================================= */
 
 .acolhimento {
-  padding: 34px 0 10px;
+  padding: 28px 0 6px;
 }
 
 .acolhimento-container {
@@ -301,10 +301,10 @@ ACOLHIMENTO
 
 .acolhimento p {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cormorant Infant', serif;
   font-size: 25px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.15;
   text-align: left;
 }
 
@@ -313,7 +313,7 @@ SOBRE MIM
 ================================= */
 
 .sobre {
-  padding-top: 22px;
+  padding-top: 18px;
 }
 
 .sobre .container {
@@ -331,11 +331,12 @@ CITAÇÃO
 .citacao {
   position: relative;
   max-width: 600px;
-  margin: 35px auto 0;
+  margin: 28px auto 0;
   color: var(--texto);
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-family: 'Cardo', serif;
+  font-size: 25px;
   font-style: italic;
+  line-height: 1.3;
   text-align: center;
   opacity: 0.85;
 }
@@ -373,11 +374,11 @@ COMO POSSO AJUDAR
 .cards-atendimento {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .card-atendimento {
-  padding: 25px;
+  padding: 21px;
   background-color: rgba(242, 230, 216, 0.66);
   border: 1px solid var(--borda);
   border-radius: 16px;
@@ -401,8 +402,8 @@ LIBRAS
 .libras::after {
   content: "";
   position: absolute;
-  right: -100px;
-  bottom: -120px;
+  top: 10px;
+  right: -60px;
   width: 320px;
   height: 320px;
   background-image: url("cantoneira.png");
@@ -425,7 +426,7 @@ LIBRAS
 .libras .botao {
   display: block;
   width: fit-content;
-  margin: 15px auto 0;
+  margin: 12px auto 0;
 }
 
 /* =================================
@@ -443,12 +444,12 @@ COMO FUNCIONA
 .passos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .passo {
   position: relative;
-  padding: 28px 22px 22px;
+  padding: 23px 20px 19px;
   background-color: rgba(242, 230, 216, 0.65);
   border: 1px solid var(--borda);
   border-radius: 16px;
@@ -464,13 +465,13 @@ COMO FUNCIONA
   display: flex;
   width: 38px;
   height: 38px;
-  margin: 0 auto 14px;
+  margin: 0 auto 12px;
   align-items: center;
   justify-content: center;
   background-color: var(--texto);
   color: var(--fundo-principal);
   border-radius: 50%;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
   font-size: 19px;
   font-weight: 700;
 }
@@ -485,7 +486,7 @@ PERGUNTAS FREQUENTES
 
 .faq-lista {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   text-align: left;
 }
 
@@ -498,7 +499,7 @@ PERGUNTAS FREQUENTES
 
 .faq summary {
   position: relative;
-  padding: 17px 48px 17px 20px;
+  padding: 15px 48px 15px 20px;
   cursor: pointer;
   font-weight: 500;
   list-style: none;
@@ -513,7 +514,7 @@ PERGUNTAS FREQUENTES
   position: absolute;
   top: 50%;
   right: 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cardo', serif;
   font-size: 25px;
   font-weight: 500;
   transform: translateY(-50%);
@@ -525,51 +526,50 @@ PERGUNTAS FREQUENTES
 
 .faq details p {
   margin: 0;
-  padding: 0 20px 18px;
+  padding: 0 20px 16px;
 }
 
 /* =================================
-CHAMADA FINAL
+ENCERRAMENTO
 ================================= */
 
-.chamada-final {
-  position: relative;
-  overflow: hidden;
+.encerramento {
   background-color: var(--fundo-destaque);
+}
+
+.encerramento-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  padding: 0;
+}
+
+.chamada-final,
+.contato {
+  padding: 10px 42px;
   text-align: center;
 }
 
-.chamada-final .container {
-  position: relative;
-  z-index: 1;
-  max-width: 650px;
-  text-align: center;
+.contato {
+  border-left: 1px solid var(--borda);
 }
 
-.chamada-final p {
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.chamada-final .botao {
-  margin-top: 22px;
-}
-
-/* =================================
-CONTATO
-================================= */
-
-.contato .container {
-  max-width: 650px;
-  text-align: center;
-}
-
+.chamada-final p,
 .contato p {
   text-align: center;
 }
 
+.chamada-final .botao {
+  margin-top: 18px;
+}
+
 .contato .botao {
-  margin-top: 5px;
+  margin-top: 4px;
+}
+
+.email-contato {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
 }
 
 /* =================================
@@ -579,6 +579,7 @@ FOOTER
 footer {
   padding: 12px 20px;
   background-color: var(--fundo-destaque);
+  border-top: 1px solid var(--borda);
   font-size: 14px;
 }
 
@@ -626,7 +627,7 @@ DESKTOP
 
   .subtitulo {
     margin: 0 0 10px;
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .infos {
@@ -705,7 +706,7 @@ DESKTOP
 
   .desktop-compact-texto strong {
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cardo', serif;
     font-size: 28px;
     line-height: 1.1;
   }
@@ -755,6 +756,11 @@ TABLET
     margin: auto;
   }
 
+  .chamada-final,
+  .contato {
+    padding: 8px 28px;
+  }
+
 }
 
 /* =================================
@@ -768,7 +774,7 @@ MOBILE
   }
 
   section {
-    padding: 38px 0;
+    padding: 30px 0;
   }
 
   .container {
@@ -832,7 +838,7 @@ MOBILE
 
   .subtitulo {
     margin: 0;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .hero .infos {
@@ -849,7 +855,7 @@ MOBILE
   /* Títulos */
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-size: 28px;
   }
 
@@ -871,19 +877,19 @@ MOBILE
   /* Acolhimento */
 
   .acolhimento {
-    padding: 28px 0 6px;
+    padding: 24px 0 4px;
   }
 
   .acolhimento p {
-    font-size: 21px;
-    line-height: 1.45;
+    font-size: 23px;
+    line-height: 1.15;
     text-align: left;
   }
 
   /* Sobre */
 
   .sobre {
-    padding-top: 20px;
+    padding-top: 8px;
   }
 
   .sobre p:not(.citacao),
@@ -895,7 +901,8 @@ MOBILE
 
   .citacao {
     padding: 0 12px;
-    font-size: 17px;
+    font-size: 24px;
+    line-height: 1.3;
   }
 
   .citacao::before {
@@ -914,7 +921,7 @@ MOBILE
   }
 
   .card-atendimento {
-    padding: 21px;
+    padding: 18px;
   }
 
   /* Como funciona */
@@ -925,13 +932,13 @@ MOBILE
   }
 
   .passo {
-    padding: 24px 20px 20px;
+    padding: 20px 18px 18px;
   }
 
   /* Perguntas frequentes */
 
   .faq summary {
-    padding: 16px 44px 16px 17px;
+    padding: 14px 44px 14px 17px;
     font-size: 14px;
   }
 
@@ -940,8 +947,26 @@ MOBILE
   }
 
   .faq details p {
-    padding: 0 17px 17px;
+    padding: 0 17px 15px;
     font-size: 14px;
+  }
+
+  /* Encerramento */
+
+  .encerramento-container {
+    grid-template-columns: 1fr;
+  }
+
+  .chamada-final,
+  .contato {
+    padding: 4px 0;
+  }
+
+  .contato {
+    margin-top: 24px;
+    padding-top: 26px;
+    border-top: 1px solid var(--borda);
+    border-left: 0;
   }
 
   /* Barra compacta mobile */
@@ -983,7 +1008,7 @@ MOBILE
 
   .mobile-compact-texto strong {
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cardo', serif;
     font-size: 22px;
     font-weight: 700;
   }
