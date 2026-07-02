@@ -756,7 +756,7 @@ DESKTOP
   .desktop-compact-hero::after {
     content: "";
     position: absolute;
-    top: -80px;
+    top: -20px;
     right: -20px;
     z-index: 0;
     width: 100px;
