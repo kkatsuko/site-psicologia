@@ -738,7 +738,7 @@ DESKTOP
     top: 39px;
     left: 0;
     z-index: 999;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
     padding: 8px 5%;
@@ -759,8 +759,8 @@ DESKTOP
     top: -80px;
     right: -20px;
     z-index: 0;
-    width: 260px;
-    height: 260px;
+    width: 100px;
+    height: 100px;
     background-image: url("cantoneira.png");
     background-size: contain;
     background-repeat: no-repeat;
