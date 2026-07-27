@@ -1,0 +1,201 @@
+/* =================================
+   VARIÁVEIS DA IDENTIDADE VISUAL
+================================= */
+
+:root {
+  --fundo-principal: #F2E6D8;
+  --fundo-destaque: #E6D2B5;
+  --texto: #5A2E2E;
+  --texto-escuro: #3E1F1F;
+  --borda: rgba(90, 46, 46, 0.18);
+  --sombra: 0 6px 20px rgba(90, 46, 46, 0.08);
+}
+
+/* =================================
+   RESET
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 28px 18px;
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* =================================
+   PÁGINA
+================================= */
+
+.pagina-links {
+  width: 100%;
+  max-width: 480px;
+  min-height: calc(100vh - 56px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =================================
+   PERFIL
+================================= */
+
+.perfil {
+  width: 100%;
+  text-align: center;
+}
+
+.foto-perfil {
+  display: block;
+  width: 145px;
+  height: 145px;
+  margin: 0 auto 18px;
+  object-fit: cover;
+  border: 5px solid var(--texto);
+  border-radius: 50%;
+  box-shadow: var(--sombra);
+}
+
+h1 {
+  margin: 0;
+  color: var(--texto);
+  font-family: 'Cardo', Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.profissao {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.apresentacao {
+  max-width: 360px;
+  margin: 18px auto 28px;
+  font-family: 'Cormorant Infant', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+/* =================================
+   BOTÕES
+================================= */
+
+.lista-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link-botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  padding: 15px 48px;
+  border: 1px solid var(--texto);
+  border-radius: 30px;
+  background-color: var(--texto);
+  color: var(--fundo-principal);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.link-botao:hover,
+.link-botao:focus-visible {
+  background-color: var(--texto-escuro);
+  color: var(--fundo-principal);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+.link-botao:focus-visible {
+  outline: 3px solid rgba(90, 46, 46, 0.35);
+  outline-offset: 3px;
+}
+
+.icone {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* =================================
+   RODAPÉ
+================================= */
+
+.rodape-links {
+  margin-top: auto;
+  padding-top: 34px;
+  color: var(--texto);
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.rodape-links p {
+  margin: 0;
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .pagina-links {
+    min-height: calc(100vh - 48px);
+  }
+
+  .foto-perfil {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .apresentacao {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-size: 21px;
+  }
+
+  .link-botao {
+    min-height: 56px;
+    font-size: 15px;
+  }
+}
