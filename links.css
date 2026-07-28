@@ -39,16 +39,6 @@ body {
    CANTONEIRA DECORATIVA
 ================================= */
 
-/*
-  A imagem precisa estar na mesma pasta de links.css:
-
-  links.css
-  cantoneira.png
-
-  Caso esteja em uma pasta, use, por exemplo:
-  background-image: url("img/cantoneira.png");
-*/
-
 body::before {
   content: "";
   position: absolute;
@@ -172,16 +162,43 @@ h1 {
   outline-offset: 3px;
 }
 
+/* =================================
+   ÍCONES
+================================= */
+
 .icone {
   position: absolute;
   left: 20px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  font-family: Georgia, serif;
-  font-size: 25px;
+  width: 24px;
+  height: 24px;
+  color: var(--fundo-principal);
+  font-size: 20px;
   line-height: 1;
+}
+
+.icone i {
+  display: block;
+}
+
+.icone-agenda {
+  position: absolute;
+}
+
+.icone-agenda .fa-calendar-days {
+  font-size: 21px;
+}
+
+.icone-agenda .fa-pen {
+  position: absolute;
+  right: -4px;
+  bottom: -3px;
+  padding: 1px;
+  background-color: var(--texto);
+  font-size: 10px;
+  transform: rotate(-12deg);
 }
 
 /* =================================
@@ -247,6 +264,19 @@ h1 {
 
   .icone {
     left: 18px;
+    width: 22px;
+    height: 22px;
+    font-size: 19px;
+  }
+
+  .icone-agenda .fa-calendar-days {
+    font-size: 20px;
+  }
+
+  .icone-agenda .fa-pen {
+    right: -4px;
+    bottom: -3px;
+    font-size: 9px;
   }
 
   .rodape-links {
